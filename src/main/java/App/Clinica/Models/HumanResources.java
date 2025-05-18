@@ -13,7 +13,7 @@ public class HumanResources extends User {
     public HumanResources() {
     }
 
-    public HumanResources(String fullName, int cedule, String email, int cellPhone, String birthdate, String address, Role role, String userName, String password) {
+    public HumanResources(String fullName, int cedule, String email, String cellPhone, String birthdate, String address, Role role, String userName, String password) {
         super(fullName, cedule, email, cellPhone, birthdate, address, role, userName, password);
     }
     

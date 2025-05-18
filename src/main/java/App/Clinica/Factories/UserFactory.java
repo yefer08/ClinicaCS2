@@ -25,7 +25,7 @@ public class UserFactory {
                 user.getFullName(),
                 user.getCedule(),
                 user.getEmail(),
-                String.valueOf(user.getCellPhone()),
+                user.getCellPhone(),
                 birthDate,
                 user.getAddress(),
                 role,
@@ -34,7 +34,7 @@ public class UserFactory {
         );
     }
 
-    public static User create(String fullName, int cedule, String email, int cellPhone, String birthdate,
+    public static User create(String fullName, int cedule, String email, String cellPhone, String birthdate,
             String address, String roleText, String userName, String password) {
         Role role = Role.fromString(roleText);
 

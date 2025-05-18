@@ -46,9 +46,12 @@ public class UserService {
         }
 
         // Validación de teléfono
-        String phoneStr = String.valueOf(userRawData.getCellPhone());
-        if (phoneStr.length() < 1 || phoneStr.length() > 10) {
-            throw new IllegalArgumentException("El número de teléfono debe tener entre 1 y 10 dígitos.");
+        if (userRawData.getCellPhone() == null || userRawData.getCellPhone().trim().isEmpty()) {
+            throw new IllegalArgumentException("El número de teléfono es requerido.");
+        }
+        String phoneStr = userRawData.getCellPhone();
+        if (!phoneStr.matches("^\\d{10}$")) {
+            throw new IllegalArgumentException("El número de teléfono debe tener exactamente 10 dígitos.");
         }
 
         // Validación de fecha de nacimiento

@@ -13,7 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.UUID)
     private int cedule;
     private String email;
-    private int cellPhone;
+    private String cellPhone;
     private String birthdate;
     private String address;
     private Role role;
@@ -23,7 +23,7 @@ public class User {
     public User() {
     }
 
-    public User(String fullName, int cedule, String email, int cellPhone, String birthdate, String address,
+    public User(String fullName, int cedule, String email, String cellPhone, String birthdate, String address,
             Role role, String userName, String password) {
         this.fullName = fullName;
         this.cedule = cedule;
@@ -60,11 +60,11 @@ public class User {
         this.email = email;
     }
 
-    public int getCellPhone() {
+    public String getCellPhone() {
         return cellPhone;
     }
 
-    public void setCellPhone(int cellPhone) {
+    public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
     }
 

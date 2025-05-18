@@ -75,7 +75,7 @@ public class HumanResourcesMenu extends BaseMenu {
             newUser.setEmail(scanner.nextLine());
             
             System.out.print("Teléfono: ");
-            newUser.setCellPhone(Integer.parseInt(scanner.nextLine()));
+            newUser.setCellPhone(scanner.nextLine());
             
             System.out.print("Fecha de nacimiento (DD/MM/YYYY): ");
             newUser.setBirthdate(scanner.nextLine());

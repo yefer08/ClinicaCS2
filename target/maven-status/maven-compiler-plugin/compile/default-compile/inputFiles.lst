@@ -1,105 +1,105 @@
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\NursingVisitPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\NursingInterventionPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\OrderPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\EmergencyContactPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\InsurancePort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\EmergencyContactService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\OrderAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\BaseMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\UserEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\InsuranceService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Factories\AppointmentFactory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\BillingService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Factories\UserFactory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\AppointmentEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\EmergencyContactEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\HumanResourcesMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Appointment.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\DiagnosticHelpService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\converters\InsuranceConverter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\OrderEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Role.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\MedicineEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\ClinicalHistoryService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\NursingInterventionEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Doctor.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\NursingVisitAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\MedicationOrderEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\User.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Patient.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Record.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\ProceduresEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\NursingRecordAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\DiagnosticOrder.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\converters\DoctorConverter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\InsuranceRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\AdministrativeMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\OrderProcedure.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\ClinicaApplication.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\EmergencyContactRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\ClinicalHistoryEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\InformationSupportMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\MedicinePort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\MedicationOrder.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\NursingRecordEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\ProceduresPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\InsuranceEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\ClinicalHistoryAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\DiagnosticHelp.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\AdminService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\OrderRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\NursingService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\UserAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\HumanResources.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\UserPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Controllers\AppointmentController.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Controllers\UserController.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\NursingRecordPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Procedures.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\VitalSignsPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\AppointmentAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\OrderService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\MedicineService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\MedicalInsurance.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\converters\OrderConverter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\converters\UserConverter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\DiagnosticHelpPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\NursingInterventionAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\DiagnosticHelpEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\UserService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\ClinicalHistoryRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\NurseMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\OrderProcedureEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\EmergencyContactAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Nurse.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\converters\PatientConverter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\NursingVisitEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\EmergencyContact.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\VitalSignsEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\AppointmentPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\NursingRecordService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\DiagnosticOrderEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Billing.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Controllers\PatientController.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\AuthService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\UserRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Inventory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\PatientAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Factories\InsuranceFactory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\AppointmentRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\LoginMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Insurance.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Menus\DoctorMenu.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Medicine.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\NursingRecordRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Entities\PatientEntity.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Factories\PatientFactory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Administrative.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Adapters\InsuranceAdapter.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\ClinicalHistoryPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\ProceduresService.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Repositories\PatientRepository.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\Order.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Models\ClinicalHistory.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Ports\PatientPort.java
-C:\Users\User\Desktop\ClinicaCS2\src\main\java\App\Clinica\Services\InformationSupportService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/UserEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/DiagnosticHelpEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Order.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/UserService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/DiagnosticHelpService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/PatientEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/OrderService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/converters/OrderConverter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Factories/InsuranceFactory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/OrderProcedureEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/NursingRecordService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/AppointmentRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/EmergencyContactService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/EmergencyContact.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/PatientRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Factories/UserFactory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/NursingVisitEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/MedicationOrder.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/InformationSupportService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Record.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/AppointmentPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/NursingInterventionAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/PatientPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/VitalSignsPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/MedicinePort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/InsuranceRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/OrderEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/DiagnosticHelp.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/ProceduresPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/converters/InsuranceConverter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/InsuranceEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/InformationSupportMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/UserAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/BaseMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Factories/PatientFactory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/HumanResources.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/converters/UserConverter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/DiagnosticOrder.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/AdministrativeMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/converters/PatientConverter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/NursingInterventionPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/OrderProcedure.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/ClinicalHistoryService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/NursingRecordEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/OrderPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Patient.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/UserRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/DiagnosticOrderEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/DoctorMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/AppointmentAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Medicine.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/MedicationOrderEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/ClinicaApplication.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/InsuranceAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/UserPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/InsurancePort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Controllers/UserController.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Appointment.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Controllers/AppointmentController.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/converters/DoctorConverter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/PatientAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Procedures.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/EmergencyContactRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/ClinicalHistoryPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/MedicalInsurance.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/MedicineEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/NursingService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/NurseMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/DiagnosticHelpPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/BillingService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/User.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Role.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/LoginMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/AdminService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/AppointmentEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/NursingRecordPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/ClinicalHistoryAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Administrative.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/EmergencyContactEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/OrderRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Doctor.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/NursingInterventionEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Controllers/PatientController.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Nurse.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/OrderAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Inventory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/NursingRecordAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Insurance.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/EmergencyContactAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/NursingVisitPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/ClinicalHistoryRepository.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/ProceduresEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/ProceduresService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/ClinicalHistory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/InsuranceService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/AuthService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Services/MedicineService.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/ClinicalHistoryEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Entities/VitalSignsEntity.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Ports/EmergencyContactPort.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Models/Billing.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Factories/AppointmentFactory.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Adapters/NursingVisitAdapter.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Menus/HumanResourcesMenu.java
+/home/carvajal/Escritorio/Universidad/Tercer Semestre/Construcción de Software/Clínica/ClinicaCS2/src/main/java/App/Clinica/Repositories/NursingRecordRepository.java

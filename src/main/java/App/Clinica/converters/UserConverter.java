@@ -19,7 +19,7 @@ public class UserConverter {
             model.getFullName(),
             model.getCedule(),
             model.getEmail(),
-            String.valueOf(model.getCellPhone()),
+            model.getCellPhone(),
             LocalDate.parse(model.getBirthdate()),
             model.getAddress(),
             model.getRole(),
@@ -34,8 +34,23 @@ public class UserConverter {
             entity.getFullName(),
             entity.getCedule(),
             entity.getEmail(),
-            Integer.parseInt(entity.getCellphone()),
+            entity.getCellphone(),
             entity.getBirthdate().toString(),
+            entity.getAddress(),
+            entity.getRole(),
+            entity.getUsername(),
+            entity.getPassword()
+        );
+    }
+
+    public static UserEntity convertToEntity(UserEntity entity) {
+        if (entity == null) return null;
+        return new UserEntity(
+            entity.getFullName(),
+            entity.getCedule(),
+            entity.getEmail(),
+            entity.getCellphone(),
+            entity.getBirthdate(),
             entity.getAddress(),
             entity.getRole(),
             entity.getUsername(),

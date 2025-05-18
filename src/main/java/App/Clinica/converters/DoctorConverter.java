@@ -17,7 +17,7 @@ public class DoctorConverter {
             entity.getFullName(),
             entity.getCedule(),
             entity.getEmail(),
-            Integer.parseInt(entity.getCellphone()),
+            entity.getCellphone(),
             entity.getBirthdate().toString(),
             entity.getAddress(),
             entity.getRole(),
@@ -34,7 +34,7 @@ public class DoctorConverter {
         entity.setFullName(model.getFullName());
         entity.setCedule(model.getCedule());
         entity.setEmail(model.getEmail());
-        entity.setCellphone(String.valueOf(model.getCellPhone()));
+        entity.setCellphone(model.getCellPhone());
         entity.setBirthdate(LocalDate.parse(model.getBirthdate()));
         entity.setAddress(model.getAddress());
         entity.setRole(model.getRole());

@@ -15,10 +15,10 @@ public class Patient {
     private String birthdate;
     private String gender;
     private String address;
-    private int cellPhone;
+    private String cellPhone;
     private String email;
 
-    public Patient(String idPatient, String fullName, String birthdate, String gender, String address, int cellPhone, String email) {
+    public Patient(String idPatient, String fullName, String birthdate, String gender, String address, String cellPhone, String email) {
         this.idPatient = idPatient;
         this.fullName = fullName;
         this.birthdate = birthdate;
@@ -68,11 +68,11 @@ public class Patient {
         this.address = address;
     }
 
-    public int getCellPhone() {
+    public String getCellPhone() {
         return cellPhone;
     }
 
-    public void setCellPhone(int cellPhone) {
+    public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
     }
 

@@ -2,8 +2,8 @@ package App.Clinica.Entities;
 
 import jakarta.persistence.*;
 
-
 @Entity
+@Table(name = "medicine_entity")
 public class MedicineEntity {
 
     @Id
@@ -13,6 +13,10 @@ public class MedicineEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "medication_order_id", nullable = false)
     private MedicationOrderEntity medicationOrder;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "medication_id", nullable = false)
+    private MedicationEntity medication;
 
     @Column(nullable = false)
     private String dose;
@@ -28,8 +32,10 @@ public class MedicineEntity {
 
     public MedicineEntity() {}
 
-    public MedicineEntity(MedicationOrderEntity medicationOrder, String dose, int duration, double cost, int itemNumber) {
+    public MedicineEntity(MedicationOrderEntity medicationOrder, MedicationEntity medication, 
+                         String dose, int duration, double cost, int itemNumber) {
         this.medicationOrder = medicationOrder;
+        this.medication = medication;
         this.dose = dose;
         this.duration = duration;
         this.cost = cost;
@@ -50,6 +56,14 @@ public class MedicineEntity {
 
     public void setMedicationOrder(MedicationOrderEntity medicationOrder) {
         this.medicationOrder = medicationOrder;
+    }
+
+    public MedicationEntity getMedication() {
+        return medication;
+    }
+
+    public void setMedication(MedicationEntity medication) {
+        this.medication = medication;
     }
 
     public String getDose() {

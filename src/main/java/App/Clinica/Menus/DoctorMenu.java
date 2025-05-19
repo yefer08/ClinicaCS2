@@ -18,7 +18,7 @@ public class DoctorMenu {
     @Autowired
     private AdminService adminService;
     @Autowired
-    private MedicineService medicineService;
+    private MedicationService medicationService;
     @Autowired
     private ProceduresService proceduresService;
     @Autowired
@@ -113,26 +113,53 @@ public class DoctorMenu {
             System.out.print("Número de orden: ");
             String numeroOrden = scanner.nextLine();
             
-            List<MedicineEntity> medications = new ArrayList<>();
-            while (true) {
-                System.out.print("ID del medicamento (o 'fin' para terminar): ");
-                String medId = scanner.nextLine();
-                if (medId.equalsIgnoreCase("fin")) break;
-                
-                MedicineEntity medicine = medicineService.getMedicineById(medId);
-                if (medicine != null) {
-                    medications.add(medicine);
-                } else {
-                    System.out.println("Medicamento no encontrado");
-                }
-            }
-            
             PatientEntity patient = adminService.getPatientById(patientId);
             UserEntity doctor = new UserEntity();
             doctor.setCedule(doctorId);
             
-            orderService.createMedicationOrder(numeroOrden, patient, doctor, medications);
-            System.out.println("Orden de medicamentos creada exitosamente.");
+            // Crear la orden primero
+            MedicationOrderEntity order = new MedicationOrderEntity(numeroOrden, patient, doctor, java.time.LocalDateTime.now());
+            List<MedicineEntity> medications = new ArrayList<>();
+            
+            int itemNumber = 1;
+            while (true) {
+                System.out.print("ID del medicamento (o 'fin' para terminar): ");
+                String input = scanner.nextLine();
+                if (input.equalsIgnoreCase("fin")) break;
+                
+                try {
+                    Integer medicationId = Integer.parseInt(input);
+                    
+                    System.out.print("Dosis (ej: '1 tableta cada 8 horas'): ");
+                    String dose = scanner.nextLine();
+                    
+                    System.out.print("Duración del tratamiento (días): ");
+                    int duration = Integer.parseInt(scanner.nextLine());
+                    
+                    System.out.print("Costo: ");
+                    double cost = Double.parseDouble(scanner.nextLine());
+                    
+                    // Crear el item de medicamento usando el nuevo método
+                    MedicineEntity medicine = orderService.createMedicineItem(
+                        order, medicationId, dose, duration, cost, itemNumber++
+                    );
+                    
+                    medications.add(medicine);
+                    System.out.println("Medicamento agregado a la orden.");
+                } catch (NumberFormatException e) {
+                    System.out.println("Por favor ingrese un número válido.");
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+            
+            if (!medications.isEmpty()) {
+                order.setMedications(medications);
+                orderService.createMedicationOrder(numeroOrden, patient, doctor, medications);
+                System.out.println("Orden de medicamentos creada exitosamente.");
+            } else {
+                System.out.println("No se agregaron medicamentos a la orden.");
+            }
         } catch (Exception e) {
             System.out.println("Error al crear orden de medicamentos: " + e.getMessage());
         }

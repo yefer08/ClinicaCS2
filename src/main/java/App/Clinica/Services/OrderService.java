@@ -4,6 +4,7 @@ import App.Clinica.Entities.*;
 import App.Clinica.Ports.OrderPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.time.LocalDateTime;
 
@@ -12,6 +13,9 @@ public class OrderService {
 
     @Autowired
     private OrderPort orderPort;
+
+    @Autowired
+    private MedicationService medicationService;
 
     public List<OrderEntity> getPatientOrders(String patientId) {
         return orderPort.findByPatientId(patientId);
@@ -32,6 +36,20 @@ public class OrderService {
         return (DiagnosticOrderEntity) orderPort.save(order);
     }
 
+    @Transactional
+    public MedicineEntity createMedicineItem(MedicationOrderEntity order, Integer medicationId, 
+                                           String dose, int duration, double cost, int itemNumber) {
+        // Buscar el medicamento en el catálogo
+        MedicationEntity medication = medicationService.getMedicationById(medicationId)
+            .orElseThrow(() -> new IllegalArgumentException("Medicamento no encontrado"));
+
+        // Crear el item de medicamento
+        MedicineEntity medicine = new MedicineEntity(order, medication, dose, duration, cost, itemNumber);
+        
+        return medicine;
+    }
+
+    @Transactional
     public MedicationOrderEntity createMedicationOrder(String numeroOrden, PatientEntity patient, UserEntity doctor,
                                                      List<MedicineEntity> medications) {
         validateOrderNumber(numeroOrden);
@@ -63,11 +81,11 @@ public class OrderService {
     }
 
     private void validateOrderNumber(String numeroOrden) {
-        if (numeroOrden == null || numeroOrden.length() > 6) {
-            throw new IllegalArgumentException("El número de orden no puede exceder 6 dígitos");
+        if (numeroOrden == null || numeroOrden.trim().isEmpty()) {
+            throw new IllegalArgumentException("El número de orden no puede estar vacío");
         }
-        if (orderPort.existsById(numeroOrden)) {
-            throw new IllegalArgumentException("El número de orden ya existe");
+        if (orderPort.findById(numeroOrden).isPresent()) {
+            throw new IllegalArgumentException("Ya existe una orden con el número: " + numeroOrden);
         }
     }
 
@@ -79,7 +97,7 @@ public class OrderService {
 
     private void validateMedicationOrder(List<MedicineEntity> medications) {
         if (medications == null || medications.isEmpty()) {
-            throw new IllegalArgumentException("Debe especificar al menos un medicamento");
+            throw new IllegalArgumentException("La orden debe contener al menos un medicamento");
         }
     }
 

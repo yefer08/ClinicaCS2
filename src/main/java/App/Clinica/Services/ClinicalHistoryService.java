@@ -7,10 +7,16 @@ import App.Clinica.Ports.PatientPort;
 import App.Clinica.Ports.UserPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import java.util.List;
 
 @Service
 public class ClinicalHistoryService {
+
+    @PersistenceContext
+    private EntityManager entityManager;
 
     @Autowired
     private ClinicalHistoryPort clinicalHistoryPort;
@@ -21,6 +27,7 @@ public class ClinicalHistoryService {
     @Autowired
     private UserPort userPort;
 
+    @Transactional
     public ClinicalHistoryEntity createClinicalRecord(String patientId, int doctorId, 
                                                     String consultationReason, 
                                                     String symptoms, String diagnosis) {
@@ -44,15 +51,29 @@ public class ClinicalHistoryService {
         return clinicalHistoryPort.save(record);
     }
 
+    @Transactional(readOnly = true)
     public List<ClinicalHistoryEntity> getPatientHistory(String patientId) {
-        return clinicalHistoryPort.findByPatientId(patientId);
+        List<ClinicalHistoryEntity> histories = clinicalHistoryPort.findByPatientId(patientId);
+        
+        // Initialize lazy relationships
+        for (ClinicalHistoryEntity history : histories) {
+            entityManager.refresh(history);
+            // Force initialization of the doctor entity
+            history.getDoctor().getFullName(); // This will force the proxy to load
+        }
+        
+        return histories;
     }
 
+    @Transactional(readOnly = true)
     public ClinicalHistoryEntity getRecordById(String id) {
-        return clinicalHistoryPort.findById(id)
+        ClinicalHistoryEntity record = clinicalHistoryPort.findById(id)
             .orElseThrow(() -> new IllegalArgumentException("Registro no encontrado"));
+        entityManager.refresh(record);
+        return record;
     }
 
+    @Transactional
     public void deleteRecord(String id) {
         if (!clinicalHistoryPort.existsById(id)) {
             throw new IllegalArgumentException("Registro no encontrado");

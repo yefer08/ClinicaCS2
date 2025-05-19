@@ -53,18 +53,27 @@ public class AdminService {
             throw new IllegalArgumentException("La fecha de nacimiento es requerida.");
         }
         try {
-            LocalDate birthDate = LocalDate.parse(newPatient.getBirthdate());
-            LocalDate now = LocalDate.now();
-            if (birthDate.isAfter(now)) {
-                throw new IllegalArgumentException("La fecha de nacimiento no puede ser futura.");
-            }
-            // Validar que no sea mayor a 150 años
-            LocalDate maxAge = now.minusYears(150);
-            if (birthDate.isBefore(maxAge)) {
-                throw new IllegalArgumentException("La fecha de nacimiento no puede ser mayor a 150 años.");
+            // Convertir el formato DD/MM/YYYY a YYYY-MM-DD
+            String[] parts = newPatient.getBirthdate().split("/");
+            if (parts.length == 3) {
+                String formattedDate = parts[2] + "-" + parts[1] + "-" + parts[0];
+                LocalDate birthDate = LocalDate.parse(formattedDate);
+                LocalDate now = LocalDate.now();
+                if (birthDate.isAfter(now)) {
+                    throw new IllegalArgumentException("La fecha de nacimiento no puede ser futura.");
+                }
+                // Validar que no sea mayor a 150 años
+                LocalDate maxAge = now.minusYears(150);
+                if (birthDate.isBefore(maxAge)) {
+                    throw new IllegalArgumentException("La fecha de nacimiento no puede ser mayor a 150 años.");
+                }
+                // Actualizar el formato en la entidad
+                newPatient.setBirthdate(formattedDate);
+            } else {
+                throw new IllegalArgumentException("La fecha debe estar en formato DD/MM/YYYY.");
             }
         } catch (DateTimeParseException e) {
-            throw new IllegalArgumentException("La fecha de nacimiento debe tener un formato válido (YYYY-MM-DD).");
+            throw new IllegalArgumentException("La fecha de nacimiento debe tener un formato válido (DD/MM/YYYY).");
         }
 
         // Validación de género
@@ -91,19 +100,19 @@ public class AdminService {
         }
 
         // Validación de teléfono
-        if (newPatient.getCellPhone() <= 0) {
+        if (newPatient.getCellPhone() == null || newPatient.getCellPhone().trim().isEmpty()) {
             throw new IllegalArgumentException("El número de teléfono es requerido.");
         }
-        String phoneStr = String.valueOf(newPatient.getCellPhone());
-        if (phoneStr.length() < 1 || phoneStr.length() > 10) {
-            throw new IllegalArgumentException("El número de teléfono debe tener entre 1 y 10 dígitos.");
+        String phoneStr = newPatient.getCellPhone();
+        if (!phoneStr.matches("^\\d{10}$")) {
+            throw new IllegalArgumentException("El número de teléfono debe tener exactamente 10 dígitos.");
         }
 
         // Validación de email (opcional)
         if (newPatient.getEmail() != null && !newPatient.getEmail().trim().isEmpty()) {
-            String emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+            String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
             if (!Pattern.matches(emailRegex, newPatient.getEmail())) {
-                throw new IllegalArgumentException("El email no tiene un formato válido. Debe ser: usuario@dominio.com");
+                throw new IllegalArgumentException("El email no tiene un formato válido.");
             }
             if (newPatient.getEmail().length() > 100) {
                 throw new IllegalArgumentException("El email no puede exceder los 100 caracteres.");

@@ -19,11 +19,16 @@ public class InsuranceService {
     private PatientPort patientPort;
 
     public InsuranceEntity registerInsurance(InsuranceEntity newInsurance) {
-        validateInsurance(newInsurance);
+        validateInsurance(newInsurance, true);
         return insurancePort.save(newInsurance);
     }
 
-    private void validateInsurance(InsuranceEntity insurance) {
+    public InsuranceEntity updateInsurance(InsuranceEntity insurance) {
+        validateInsurance(insurance, false);
+        return insurancePort.save(insurance);
+    }
+
+    private void validateInsurance(InsuranceEntity insurance, boolean isNew) {
         // Validación de compañía de seguros
         if (insurance.getInsuranceCompany() == null || insurance.getInsuranceCompany().trim().isEmpty()) {
             throw new IllegalArgumentException("El nombre de la compañía de seguros es requerido.");
@@ -59,8 +64,8 @@ public class InsuranceService {
             throw new IllegalArgumentException("El paciente no existe en el sistema.");
         }
 
-        // Validación de póliza única por paciente
-        if (insurancePort.existsByPatientId(insurance.getPatient().getIdPatient())) {
+        // Validación de póliza única por paciente solo para nuevos registros
+        if (isNew && insurancePort.existsByPatientId(insurance.getPatient().getIdPatient())) {
             throw new IllegalArgumentException("El paciente ya tiene una póliza de seguro registrada.");
         }
 

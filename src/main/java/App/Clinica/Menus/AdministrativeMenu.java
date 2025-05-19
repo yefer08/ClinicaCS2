@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 
 @Component
 public class AdministrativeMenu extends BaseMenu {
@@ -96,7 +97,7 @@ public class AdministrativeMenu extends BaseMenu {
             newPatient.setAddress(scanner.nextLine());
             
             System.out.print("Teléfono: ");
-            newPatient.setCellPhone(Integer.parseInt(scanner.nextLine()));
+            newPatient.setCellPhone(scanner.nextLine());
             
             System.out.print("Email (opcional): ");
             String email = scanner.nextLine();
@@ -167,7 +168,7 @@ public class AdministrativeMenu extends BaseMenu {
                 insurance.setExpirationDate(LocalDate.parse(expiration));
             }
             
-            insuranceService.registerInsurance(insurance);
+            insuranceService.updateInsurance(insurance);
             System.out.println("Seguro actualizado exitosamente.");
         } catch (Exception e) {
             System.out.println("Error al actualizar seguro: " + e.getMessage());
@@ -206,7 +207,14 @@ public class AdministrativeMenu extends BaseMenu {
             int doctorId = Integer.parseInt(scanner.nextLine());
             
             System.out.print("Fecha y hora (YYYY-MM-DD HH:MM): ");
-            LocalDateTime dateTime = LocalDateTime.parse(scanner.nextLine());
+            String dateTimeStr = scanner.nextLine();
+            
+            // Convertir el formato de fecha y hora
+            String[] parts = dateTimeStr.split(" ");
+            if (parts.length != 2) {
+                throw new IllegalArgumentException("El formato de fecha y hora debe ser YYYY-MM-DD HH:MM");
+            }
+            LocalDateTime dateTime = LocalDateTime.parse(dateTimeStr.replace(" ", "T") + ":00");
             
             System.out.print("Motivo de la cita: ");
             String reason = scanner.nextLine();
@@ -224,6 +232,8 @@ public class AdministrativeMenu extends BaseMenu {
             
             adminService.scheduleAppointment(appointment);
             System.out.println("Cita programada exitosamente.");
+        } catch (DateTimeParseException e) {
+            System.out.println("Error al programar cita: El formato de fecha y hora debe ser YYYY-MM-DD HH:MM (ejemplo: 2025-05-30 10:30)");
         } catch (Exception e) {
             System.out.println("Error al programar cita: " + e.getMessage());
         }

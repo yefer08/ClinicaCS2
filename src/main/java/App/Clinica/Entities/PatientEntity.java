@@ -7,8 +7,6 @@ package App.Clinica.Entities;
 
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -17,14 +15,13 @@ import jakarta.persistence.Table;
 public class PatientEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String idPatient;
 
     private String fullName;
     private String birthdate;
     private String gender;
     private String address;
-    private int cellPhone;
+    private String cellPhone;
     private String email;
 
     public PatientEntity() {
@@ -32,7 +29,7 @@ public class PatientEntity {
     }
 
     public PatientEntity(String idPatient, String fullName, String birthdate, String gender,
-            String address, int cellPhone, String email) {
+            String address, String cellPhone, String email) {
         this.idPatient = idPatient;
         this.fullName = fullName;
         this.birthdate = birthdate;
@@ -82,11 +79,11 @@ public class PatientEntity {
         this.address = address;
     }
 
-    public int getCellPhone() {
+    public String getCellPhone() {
         return cellPhone;
     }
 
-    public void setCellPhone(int cellPhone) {
+    public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
     }
 
